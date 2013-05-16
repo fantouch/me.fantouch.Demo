@@ -53,6 +53,10 @@
             android:name="me.fantouch.demo.TestIOSTitleBarActivity"
             android:label="IOS风格标题栏" >
         </activity>
+        <activity
+            android:name="me.fantouch.demo.TestMultiPagerViewActivity"
+            android:label="多个View的ViewPager" >
+        </activity>
 
         <service android:name="me.fantouch.demo.SendService" >
         </service>

@@ -34,6 +34,8 @@ public class MainMenuActivity extends Activity {
             startActivity(new Intent(this, TestIndicativeRadioGpByCodeActivity.class));
         } else if (id == R.id.IOSTitleBar) {
             startActivity(new Intent(this, TestIOSTitleBarActivity.class));
+        } else if (id == R.id.MultiViewPager) {
+            startActivity(new Intent(this, TestMultiPagerViewActivity.class));
         }
 
     }
