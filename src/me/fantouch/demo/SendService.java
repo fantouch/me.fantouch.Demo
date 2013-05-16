@@ -27,7 +27,8 @@ public class SendService extends AbsSendReportsService {
         }
 
         FinalHttp fh = new FinalHttp();
-        fh.post("http://192.168.0.163:8888/upload.php", params, new AjaxCallBack<String>() {
+        fh.post("http://www.fantouch.me/server.demo.fantouch.me/upload.php", params,
+                new AjaxCallBack<String>() {
 
             @Override
             public void onSuccess(String t) {
