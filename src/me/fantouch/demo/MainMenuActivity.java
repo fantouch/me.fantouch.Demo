@@ -36,6 +36,8 @@ public class MainMenuActivity extends Activity {
             startActivity(new Intent(this, TestIOSTitleBarActivity.class));
         } else if (id == R.id.MultiViewPager) {
             startActivity(new Intent(this, TestMultiPagerViewActivity.class));
+        } else if (id == R.id.ScrollAdv) {
+            startActivity(new Intent(this, TestScrollAdvActivity.class));
         }
 
     }

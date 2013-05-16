@@ -1,63 +1,82 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context=".TestUpdateHelperActivity" >
+    android:layout_height="fill_parent" >
 
-    <Button
-        android:id="@+id/updateHelper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="自动更新模块" />
-    <Button
-        android:layout_below="@id/updateHelper"
-        android:id="@+id/log"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="Log模块" />
-    <Button
-        android:layout_below="@id/log"
-        android:id="@+id/crash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="Crash自定义处理模块" />
-    <Button
-        android:layout_below="@id/crash"
-        android:id="@+id/indicativeRadioGp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="IndicativeRadioGp" />
-    <Button
-        android:layout_below="@id/indicativeRadioGp"
-        android:id="@+id/indicativeRadioGpByCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="IndicativeRadioGpByCode" />
-    <Button
-        android:layout_below="@id/indicativeRadioGpByCode"
-        android:id="@+id/IOSTitleBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="IOSTitleBar" />
-    <Button
-        android:layout_below="@id/IOSTitleBar"
-        android:id="@+id/MultiViewPager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick"
-        android:text="MultiViewPager" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:context=".TestUpdateHelperActivity" >
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/updateHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="自动更新模块" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updateHelper"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="Log模块" />
+
+        <Button
+            android:id="@+id/crash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="Crash自定义处理模块" />
+
+        <Button
+            android:id="@+id/indicativeRadioGp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/crash"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="IndicativeRadioGp" />
+
+        <Button
+            android:id="@+id/indicativeRadioGpByCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/indicativeRadioGp"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="IndicativeRadioGpByCode" />
+
+        <Button
+            android:id="@+id/IOSTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/indicativeRadioGpByCode"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="IOSTitleBar" />
+
+        <Button
+            android:id="@+id/MultiViewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/IOSTitleBar"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="MultiViewPager" />
+        <Button
+            android:id="@+id/ScrollAdv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MultiViewPager"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:text="ScrollAdv" />
+    </RelativeLayout>
+
+</ScrollView>

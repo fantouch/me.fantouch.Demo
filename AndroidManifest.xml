@@ -57,6 +57,10 @@
             android:name="me.fantouch.demo.TestMultiPagerViewActivity"
             android:label="多个View的ViewPager" >
         </activity>
+        <activity
+            android:name="me.fantouch.demo.TestScrollAdvActivity"
+            android:label="轮播广告组件" >
+        </activity>
 
         <service android:name="me.fantouch.demo.SendService" >
         </service>

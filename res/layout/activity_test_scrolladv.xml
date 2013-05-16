@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fantouch="http://schemas.android.com/apk/res/me.fantouch.demo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <me.fantouch.libs.scrolladv.ScrollAdv
+        android:id="@+id/scroll_adv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        fantouch:indicator_margin="10dp"
+        fantouch:remainDur="2000"
+        fantouch:switchAnimDur="1000" >
+    </me.fantouch.libs.scrolladv.ScrollAdv>
+
+</LinearLayout>
