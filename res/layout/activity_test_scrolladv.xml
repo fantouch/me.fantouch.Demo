@@ -9,8 +9,7 @@
         android:id="@+id/scroll_adv"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        fantouch:indicator_margin="10dp"
-     >
+        fantouch:indicator_margin="10dp">
     </me.fantouch.libs.scrolladv.ScrollAdv>
 
 </LinearLayout>

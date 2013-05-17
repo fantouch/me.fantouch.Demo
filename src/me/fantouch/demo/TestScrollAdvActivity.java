@@ -18,20 +18,23 @@ public class TestScrollAdvActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_scrolladv);
 
+        // 图片url列表
         List<String> imgUrls = new ArrayList<String>();
         for (int i = 0; i < 5; i++) {
             imgUrls.add("http://www.fantouch.me/imgs.demo.fantouch.me/img"
                     + (i + 1) + ".jpg");
         }
 
-        scrollAdv = (ScrollAdv) findViewById(R.id.scroll_adv);
-        scrollAdv.setImgs(imgUrls, new OnImgClickListener() {
-
+        // 图片点击监听器
+        OnImgClickListener imgClickListener = new OnImgClickListener() {
             @Override
             public void onImgClick(int postion) {
                 Logg.d(postion + "");
             }
-        });
+        };
+
+        scrollAdv = (ScrollAdv) findViewById(R.id.scroll_adv);
+        scrollAdv.setImgs(imgUrls, imgClickListener);
     }
 
     @Override
