@@ -20,7 +20,6 @@ public class TestMultiPagerViewActivity extends Activity {
     private PagerContainer mContainer;
     private MyPagerAdapter mAdapter;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,25 +28,7 @@ public class TestMultiPagerViewActivity extends Activity {
         mAdapter = new MyPagerAdapter(this);
 
         mContainer = (PagerContainer) findViewById(R.id.pager_container);
-        mContainer.getViewPager().setAdapter(mAdapter);
-    }
-
-    @Override
-    protected void onPause() {
-        mAdapter.fb.onPause();
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        mAdapter.fb.onResume();
-        super.onResume();
-    }
-
-    @Override
-    protected void onDestroy() {
-        mAdapter.fb.onDestroy();
-        super.onDestroy();
+        mContainer.setAdapter(mAdapter);
     }
 
     private class MyPagerAdapter extends PagerAdapter {
@@ -101,4 +82,36 @@ public class TestMultiPagerViewActivity extends Activity {
             return (view == object);
         }
     }
+
+    /* 生命周期 */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        mContainer.onSaveInstanceState(outState);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mContainer.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onPause() {
+        mAdapter.fb.onPause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        mAdapter.fb.onResume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mAdapter.fb.onDestroy();
+        super.onDestroy();
+    }
+    /* 生命周期 */
 }
