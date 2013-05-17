@@ -21,7 +21,7 @@ public class TestScrollAdvActivity extends Activity {
         // 图片url列表
         List<String> imgUrls = new ArrayList<String>();
         for (int i = 0; i < 5; i++) {
-            imgUrls.add("http://www.fantouch.me/imgs.demo.fantouch.me/img"
+            imgUrls.add("http://www.fantouch.me/imgs.demo.fantouch.me/ximg"
                     + (i + 1) + ".jpg");
         }
 

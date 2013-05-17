@@ -43,8 +43,8 @@ public class TestMultiPagerViewActivity extends Activity {
             fb = FinalBitmap.create(context);
             fb.configDownlader(new RefImgDownloader(context));
             fb.configCompressFormat(Bitmap.CompressFormat.PNG);
-            fb.configLoadingImage(android.R.drawable.ic_menu_sort_by_size);
-            fb.configLoadfailImage(android.R.drawable.ic_menu_close_clear_cancel);
+            fb.configLoadingImage(android.R.drawable.stat_notify_sync);
+            fb.configLoadfailImage(android.R.drawable.stat_notify_error);
             fb.configBitmapMaxWidth(getResources().getDimensionPixelSize(R.dimen.pagerWidth));
             fb.configBitmapMaxHeight(getResources()
                     .getDimensionPixelSize(R.dimen.pagerHeight));
