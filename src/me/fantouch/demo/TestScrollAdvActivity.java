@@ -4,7 +4,9 @@ package me.fantouch.demo;
 import android.app.Activity;
 import android.os.Bundle;
 
+import me.fantouch.libs.log.Logg;
 import me.fantouch.libs.scrolladv.ScrollAdv;
+import me.fantouch.libs.scrolladv.ScrollAdv.OnImgClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,25 @@ public class TestScrollAdvActivity extends Activity {
         }
 
         scrollAdv = (ScrollAdv) findViewById(R.id.scroll_adv);
-        scrollAdv.setImgs(imgUrls);
+        scrollAdv.setImgs(imgUrls, new OnImgClickListener() {
+
+            @Override
+            public void onImgClick(int postion) {
+                Logg.d(postion + "");
+            }
+        });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        scrollAdv.onSaveInstanceState(outState);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        scrollAdv.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
@@ -34,8 +54,8 @@ public class TestScrollAdvActivity extends Activity {
 
     @Override
     protected void onResume() {
-        scrollAdv.onResume();
         super.onResume();
+        scrollAdv.onResume();
     }
 
     @Override
